@@ -1,0 +1,29 @@
+<?php
+/** @var $block \Namluu\ProductLabel\Block\Product\View\Labels */
+?>
+<ul class="product-view-labels">
+    <?php if ($featureLabelUrl = $block->getProductLabel('feature')):?>
+        <li class="product-view-labels feature">
+            <img src="<?= $block->escapeUrl($featureLabelUrl);?>"
+                 alt="<?= $block->escapeHtmlAttr(__('Feature'));?>"/>
+        </li>
+    <?php endif;?>
+    <?php if ($onsaleLabelUrl = $block->getProductLabel('onsale')):?>
+        <li class="product-view-labels on">
+            <img src="<?= $block->escapeUrl($onsaleLabelUrl);?>"
+                 alt="<?= $block->escapeHtmlAttr(__('On Sale'));?>"/>
+        </li>
+    <?php endif;?>
+    <?php if ($isNewLabelUrl = $block->getProductLabelNew()):?>
+        <li class="product-view-labels new">
+            <img src="<?= $block->escapeUrl($isNewLabelUrl);?>"
+                 alt="<?= $block->escapeHtmlAttr(__('New'));?>"/>
+        </li>
+    <?php endif;?>
+    <?php if ($outOfStockLabelUrl = $block->getProductLabel('outofstock')):?>
+        <li class="product-view-labels outofstock">
+            <img src="<?= $block->escapeUrl($outOfStockLabelUrl);?>"
+                 alt="<?= $block->escapeHtmlAttr(__('Out of Stock'));?>"/>
+        </li>
+    <?php endif;?>
+</ul>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+<!--        <tab id="Namluu" translate="label" sortOrder="2">-->
+<!--            <label>Namluu</label>-->
+<!--        </tab>-->
+        <section id="product_label" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Labels</label>
+            <tab>namluu</tab>
+            <resource>Namluu_ProductLabel::config</resource>
+            <group id="setting" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Labels Setting</label>
+                <field id="onsale" translate="label comment" type="image" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>On Sale Label</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/label</upload_dir>
+                    <base_url type="media" scope_info="1">catalog/product/label</base_url>
+                </field>
+                <field id="outofstock" translate="label comment" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Out of Stock Label</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/label</upload_dir>
+                    <base_url type="media" scope_info="1">catalog/product/label</base_url>
+                </field>
+                <field id="new" translate="label comment" type="image" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Label</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/label</upload_dir>
+                    <base_url type="media" scope_info="1">catalog/product/label</base_url>
+                </field>
+                <field id="feature" translate="label comment" type="image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Feature Label</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/label</upload_dir>
+                    <base_url type="media" scope_info="1">catalog/product/label</base_url>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
